@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ssia
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/ssia
+    username: root
+    password: 1111
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false  # SQL 로그 출력
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect  # MySQL 8에 맞는 dialect
+        format_sql: true  # SQL 포맷팅
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG  # Hibernate 쿼리 출력 (SQL)
+    org.hibernate.type.descriptor.sql.BasicBinder: OFF # TRACE  # 바인딩 파라미터 출력
