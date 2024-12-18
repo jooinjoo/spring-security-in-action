@@ -1,4 +1,4 @@
-package com.example.ssia.controller;
+package com.example.ssia.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
