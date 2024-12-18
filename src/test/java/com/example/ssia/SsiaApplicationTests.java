@@ -1,10 +1,10 @@
-package com.example.ssiach2ex1;
+package com.example.ssia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SsiaCh2Ex1ApplicationTests {
+class SsiaApplicationTests {
 
     @Test
     void contextLoads() {

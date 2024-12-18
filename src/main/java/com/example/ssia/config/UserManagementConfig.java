@@ -1,4 +1,4 @@
-package com.example.ssiach2ex1.config;
+package com.example.ssia.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.User;
