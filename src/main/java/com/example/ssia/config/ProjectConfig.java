@@ -2,8 +2,6 @@ package com.example.ssia.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.stereotype.Component;
 
@@ -21,10 +19,5 @@ public class ProjectConfig {
         userDetailsManager.setUsersByUsernameQuery(userByUsernameQuery);
         userDetailsManager.setAuthoritiesByUsernameQuery(authsByUserQuery);
         return userDetailsManager;
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
     }
 }
