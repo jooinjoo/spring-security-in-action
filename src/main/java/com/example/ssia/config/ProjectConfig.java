@@ -10,10 +10,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 @EnableAsync
 public class ProjectConfig {
 
-    @Bean
-    public InitializingBean initializingBean() {
-        return () -> SecurityContextHolder.setStrategyName(
-                SecurityContextHolder.MODE_INHERITABLETHREADLOCAL);
-    }
+//    @Bean
+//    public InitializingBean initializingBean() {
+//        return () -> SecurityContextHolder.setStrategyName(
+//                SecurityContextHolder.MODE_INHERITABLETHREADLOCAL);
+//    }
 
 }
