@@ -6,6 +6,8 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
+import static org.springframework.security.config.Customizer.withDefaults;
+
 @Configuration
 @EnableAsync
 public class ProjectConfig {
@@ -16,10 +18,7 @@ public class ProjectConfig {
                 .authorizeHttpRequests((authz) -> authz
                         .anyRequest().authenticated()
                 )
-                .httpBasic(c -> {
-                    c.realmName("OTHER");
-                    c.authenticationEntryPoint(new CustomEntryPoint());
-                });
+                .formLogin(withDefaults());
         return http.build();
     }
 }
